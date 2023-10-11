@@ -1,3 +1,5 @@
+https://chat.openai.com/share/85d872a9-f10f-4a17-9293-a31f4d47fc91
+ 
  1. Data Entered into Database
  2. Data - Sugar, BP, Disease, Doctor, etc.
  3. Data Insights displayed via charts
