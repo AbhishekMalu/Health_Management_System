@@ -1,0 +1,29 @@
+# **Run this project :**
+First, clone the repository to your local machine:
+
+```bash
+  git clone https://github.com/AbhishekMalu/Health_Management_System
+```
+Go to the project directory
+
+```bash
+  cd Health_Management_System
+```
+
+Create the virtual Environment
+```bash
+  virtualenv env
+```
+Activate your environment
+```bash
+  ./env/Scripts/activate
+```
+Then Install the required Dependencies. Ans update 
+Update requirements.txt file
+```bash
+  pip freeze > requirements.txt
+```
+To Download Required Package
+```bash
+  pip install -r requirements.txt
+```
