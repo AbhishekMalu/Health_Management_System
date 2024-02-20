@@ -18,8 +18,7 @@ Activate your environment
 ```bash
   ./env/Scripts/activate
 ```
-Then Install the required Dependencies. Ans update 
-Update requirements.txt file
+Then Install the required Dependencies. And update requirements.txt file
 ```bash
   pip freeze > requirements.txt
 ```
