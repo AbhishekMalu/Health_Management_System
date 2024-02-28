@@ -1,5 +1,5 @@
 import psycopg2
-from DBcredential import Token
+from Dbcredential import Token
 
 with psycopg2.connect(
   host=Token.get("hostname"),
