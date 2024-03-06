@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 import psycopg2 #pip install psycopg2 
 import psycopg2.extras
-from DBcredential import Token
+from Dbcredential import Token
 
 app = Flask(__name__)
 app.secret_key = "cairocoders-ednalan"
@@ -43,10 +43,18 @@ def login():
         email = request.form['email']
         password = request.form['password']
         cur.execute('SELECT * FROM register WHERE email = %s and password = %s', (email, password))
-        data = cur.fetchall()
-        if (len(data)):
-            return redirect(url_for('dashboard'))
-        return redirect(url_for('Index'))
+        data = cur.fetchone() # was cur.fetchall()
+        
+        # Modify
+        
+        if data:
+            return jsonify({'success': True, 'message': 'Login successful'})
+        else:
+            return jsonify({'success': False, 'message': 'Invalid credentials'})
+                
+    #     if (len(data)):
+    #         return redirect(url_for('dashboard'))
+    # return redirect(url_for('Index'))
 
 @app.route('/dashboard')
 def dashboard():
