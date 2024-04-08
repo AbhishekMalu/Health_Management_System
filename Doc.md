@@ -26,3 +26,12 @@ To Download Required Package
 ```bash
   pip install -r requirements.txt
 ```
+
+command to run the streamlit app: 
+```bash
+  streamlit run {your_app}.py
+```
+command to run the FastAPI 
+```bash
+  uvicorn {your_app}:app --host 0.0.0.0 --port 8000
+```
