@@ -1,6 +1,9 @@
 For current project below link
 https://chat.openai.com/share/7d096246-e157-44a5-873e-018416cd536f
 https://chat.openai.com/share/85d872a9-f10f-4a17-9293-a31f4d47fc91
+
+tester
+https://chat.openai.com/c/bd20455e-0fbd-4e49-9c39-17c1ba4a140f
  
  1. Data Entered into Database
  2. Data - Sugar, BP, Disease, Doctor, etc.
