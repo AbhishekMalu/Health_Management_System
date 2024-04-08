@@ -1,0 +1,9 @@
+First go into this folder via cd in Terminal
+
+Adjust the path of the h5 model in fastapi_app.py file
+
+Open two terminal windows. In one window, run the FastAPI app:
+uvicorn fastapi_app:app --host 0.0.0.0 --port 8000
+
+In the other window, run the Streamlit app:
+streamlit run streamlit_app.py
