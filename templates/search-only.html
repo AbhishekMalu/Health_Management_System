@@ -1,0 +1,324 @@
+<html lang="en" style="transform: none;" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+
+<head>
+  <meta charset="utf-8">
+  <title>HMS</title>
+  <link rel="icon" href="../static/assets/img/favicon.png" type="image/x-icon">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+  <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="../static/assets/css/feather.css">
+
+  <link rel="stylesheet" href="../static/assets/css/custom.css">
+  <style id="theia-sticky-sidebar-stylesheet-TSS">
+    .theiaStickySidebar:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+  <style type="text/css">
+    @font-face {
+      font-family: Roboto;
+      src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf");
+    }
+  </style>
+</head>
+
+<body style="transform: none;">
+
+  <div class="main-wrapper" style="transform: none;">
+
+    <header class="header header-fixed header-one">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg header-nav">
+          <div class="navbar-header">
+            <a id="mobile_btn" href="javascript:void(0);">
+              <span class="bar-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </a>
+            <a href="/" class="navbar-brand logo">
+              <img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+            </a>
+          </div>
+          <div class="main-menu-wrapper">
+            <div class="menu-header">
+              <a href="/index" class="menu-logo">
+                <img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+              </a>
+              <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas"
+                  data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"
+                  data-fa-i2svg="">
+                  <path fill="currentColor"
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                  </path>
+                </svg><!-- <i class="fas fa-times"></i> Font Awesome fontawesome.com -->
+              </a>
+            </div>
+            <ul class="main-nav">
+              <li class="active">
+                <a href="/">Home </a>
+              </li>
+
+              <li>
+                <a href="/about">About Us </a>
+              </li>
+
+              <li>
+                <a href="/contact">Contact Us </a>
+              </li>
+
+              <li class="phone_login">
+                <a href="/register">Register </a>
+              </li>
+
+              <li class="phone_login">
+                <a href="/login">Login</a>
+              </li>
+
+              <li class="register-btn">
+                <a href="/register" class="btn reg-btn"><i class="feather-user"></i>Register</a>
+              </li>
+              <li class="register-btn">
+                <a href="/login" class="btn btn-primary log-btn"><i class="feather-lock"></i>Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    {% if search_results %}
+
+    <div class="doctor-content content" style="transform: none; min-height: 185.906px;padding-top:65px">
+      <div class="container" style="transform: none;">
+
+        <div class="row" style="transform: none;">
+          <div class="col-xl-12 col-lg-12 map-view" style="transform: none;">
+            <div class="row" style="transform: none; display: flex; justify-content: center;">
+
+              <div class="col-lg-9" style="padding-top: 50px;">
+                <div class="doctor-filter-info">
+                  <div class="doctor-filter-inner">
+                    <div>
+                      <div class="doctors-found">
+                        <p><span>{{msg}}</span>{{msg1}}</p>
+                      </div>
+
+                    </div>
+                    <div class="doctor-filter-option">
+
+
+                      <div class="doctor-filter-sort">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {% for doctor in search_results %}
+                <div class="card doctor-card">
+                  <div class="card-body">
+                    <div class="doctor-widget-one" style="display: flex; justify-content: center;">
+                      <div class="doc-info-left" style="text-align: center;">
+                        <div class="doctor-img">
+                          <a href="{{ url_for('doctor_profile', doctor_id=doctor.Doctor_ID) }}">
+                            <img src="../static/assets/img/doctors/{{ doctor.Profile_URL }}" class="img-fluid"
+                              alt="Dr Profile">
+                          </a>
+                          <div class="favourite-btn">
+                            <!-- Favourite button content -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="doc-info-cont">
+                        <h4 class="doc-name">
+                          <a href="{{ url_for('doctor_profile', doctor_id=doctor.Doctor_ID) }}">Dr. {{ doctor.Name
+                            }}</a>
+                        </h4>
+                        <p class="doc-speciality">{{ doctor.Qualification }}, {{ doctor.Specialization }}</p>
+                        <div class="clinic-details">
+
+                          <p class="doc-location">
+                            <i class="feather-award"></i> {{ doctor.Clinic_Name }}
+                          </p>
+                          <p class="doc-location">
+                            <i class="feather-map-pin"></i>
+                            {{ doctor.Clinic_Address }}, {{ doctor.State }}
+                          </p>
+
+                          <!-- <p class="doc-location">-->
+                          <!--  <i class="feather-award"></i> <span>20</span> Years of Experience-->
+                          <!--</p>-->
+                          <p class="doc-location">&nbsp;
+                            <i class="fas fa-id-badge" style="color: #C0C0C0;"></i>
+                            &nbsp;&nbsp;{{ doctor.Doctor_ID }}
+
+                          <p class="doc-location">
+                            <i class="far fa-money-bill-alt" style="color: #C0C0C0;"></i>
+                            &nbsp;&nbsp;{{ doctor.Fee }} ₹
+
+                          </p>
+
+                        </div>
+                        <div class="reviews-ratings">
+                          <!-- Reviews and ratings content -->
+                        </div>
+                      </div>
+                      <div class="doc-info-right">
+
+                        <div class="clinic-booking book-appoint">
+                          <a class="btn btn-primary" href="/login">Book Appointment</a>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-xl-3 col-lg-12 theiaStickySidebar map-right"
+            style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px; ">
+
+            <div class="theiaStickySidebar"
+              style="padding-top: 0px; padding-bottom: 0px; position: static; transform: none;">
+              <div id="map" class="map-listing">
+                <div style="height: 100%; width: 100%;">
+                  <div style="overflow: hidden;"></div>
+                </div>
+              </div>
+              <div class="resize-sensor"
+                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;padding-top: 50px;">
+                <div class="resize-sensor-expand"
+                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                  <div
+                    style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 10px; height: 10px;">
+                  </div>
+                </div>
+                <div class="resize-sensor-shrink"
+                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                  <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {% else %}
+
+    <p>No doctors found.</p>
+
+    {% endif %}
+
+
+    <footer class="footer footer-one">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <div class="footer-widget footer-about">
+                <a href="/">
+                  <div class="footer-logo">
+                    <img src="../static/assets/img/logo.png" alt="logo">
+                  </div>
+                </a>
+                <div class="footer-about-content">
+                  <p>Experience hassle-free healthcare access and connect with trusted healthcare professionals
+                    effortlessly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget footer-menu">
+                <h2 class="footer-title">For Patients</h2>
+                <ul>
+                  <li><a href="/">Search for Doctors</a></li>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Register</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget footer-menu">
+                <h2 class="footer-title">For Doctors</h2>
+                <ul>
+                  <li><a href="/login">Appointments</a></li>
+                  <li><a href="/coming-soon">Chat</a></li>
+                  <li><a href="/login">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-5">
+              <div class="footer-widget footer-contact">
+                <h2 class="footer-title">Contact Us</h2>
+                <div class="footer-contact-info">
+                  <div class="footer-address">
+                    <p><i class="feather-map-pin"></i> Jodhpur, Rajasthan</p>
+                  </div>
+                  <div class="footer-address">
+                    <p><i class="feather-phone-call"></i> +91 902-999-5550</p>
+                  </div>
+                  <div class="footer-address mb-0">
+                    <p><i class="feather-mail"></i> healthy.doctor2000@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../static/assets/js/jquery-3.6.4.min.js"></script>
+
+  <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../static/assets/js/feather.min.js"></script>
+
+  <script src="../static/assets/js/moment.min.js"></script>
+  <script src="../static/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+  <script src="../static/assets/js/owl.carousel.min.js"></script>
+
+  <script src="../static/assets/js/slick.js"></script>
+
+  <script src="../static/assets/js/aos.js"></script>
+
+  <script src="../static/assets/js/counter.js"></script>
+
+  <script src="../static/assets/js/backToTop.js"></script>
+
+  <script src="../static/assets/js/script.js"></script>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div></div>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+
+<head>
+  <meta charset="utf-8">
+  <title>HMS</title>
+  <link rel="shortcut icon" href="../static/assets/img/favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+  <!-- -------------------- social icons ----------------------- -->
+</head>
+
+<body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+
+  <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="../static/assets/css/feather.css">
+
+  <link rel="stylesheet" href="../static/assets/plugins/daterangepicker/daterangepicker.css">
+
+  <link rel="stylesheet" href="../static/assets/css/custom.css">
+
+
+
+  <div class="main-wrapper">
+
+    <header class="header header-fixed header-one">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg header-nav">
+          <div class="navbar-header">
+            <a id="mobile_btn" href="javascript:void(0);">
+              <span class="bar-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </a>
+            <a href="/index" class="navbar-brand logo">
+              <img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+            </a>
+          </div>
+          <div class="main-menu-wrapper">
+            <div class="menu-header">
+              <a href="/index" class="menu-logo">
+                <img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+              </a>
+              <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas"
+                  data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"
+                  data-fa-i2svg="">
+                  <path fill="currentColor"
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                  </path>
+                </svg><!-- <i class="fas fa-times"></i> Font Awesome fontawesome.com -->
+              </a>
+            </div>
+            <ul class="main-nav">
+              <li>
+                <a href="/index">Home </a>
+              </li>
+
+              <li>
+                <a href="/patient-dashboard">Patients </a>
+              </li>
+
+              <li>
+                <a href="/doctor-dashboard">Doctors </a>
+              </li>
+              <li>
+                <a href="/admin-dashboard">Admin </a>
+              </li>
+
+              <li>
+                <a href="/contact-us">Contact Us </a>
+              </li>
+
+              <ul class="nav header-navbar-rht" style="padding-top: 20px;">
+
+                <li class="nav-item dropdown has-arrow logged-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="user-img">
+                      <img class="rounded-circle" src="../static/assets/img/{{profile}}" width="31" alt="profile">
+                    </span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <div class="user-header">
+                      <div class="avatar avatar-sm">
+                        <img src="../static/assets/img/{{profile}}" alt="User Image" class="avatar-img rounded-circle">
+                      </div>
+                      <div class="user-text">
+                        <h6>{{name}}</h6>
+                        <p class="text-muted mb-0">{{user}}</p>
+                      </div>
+                    </div>
+                    <a class="dropdown-item" href="{{dashboard}}">Dashboard</a>
+                    <a class="dropdown-item" href="{{url}}">Profile Settings</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <div class="content" style="transform: none; min-height: 387.703px; padding-top: 150px;">
+      <div class="container" style="transform: none;">
+        <div class="row" style="transform: none;">
+          <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar dct-dashbd-lft"
+            style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+
+            <div class="theiaStickySidebar"
+              style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 82px;">
+              <div class="card widget-profile pat-widget-profile">
+                <div class="card-body">
+                  <div class="pro-widget-content">
+                    <div class="profile-info-widget">
+                      <a href="#" class="booking-doc-img">
+                        <img src="assets/img/patients/patient.jpg" alt="User Image">
+                      </a>
+                      <div class="profile-det-info">
+                        <h3>Richard Wilson</h3>
+                        <div class="patient-details">
+                          <h5><b>Patient ID :</b> PT0016</h5>
+                          <h5 class="mb-0"><svg class="svg-inline--fa fa-map-marker-alt fa-w-12" aria-hidden="true"
+                              focusable="false" data-prefix="fas" data-icon="map-marker-alt" role="img"
+                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                              <path fill="currentColor"
+                                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                              </path>
+                            </svg><!-- <i class="fas fa-map-marker-alt"></i> Font Awesome fontawesome.com --> Newyork,
+                            United States</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="patient-info">
+                    <ul>
+                      <li>Phone <span>+1 952 001 8563</span></li>
+                      <li>Age <span>38 Years, Male</span></li>
+                      <li>Blood Group <span>AB+</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="resize-sensor"
+                style="position: absolute; inset: 0px; overflow: hidden; z-index: -1; visibility: hidden;">
+                <div class="resize-sensor-expand"
+                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                  <div
+                    style="position: absolute; left: 0px; top: 0px; transition: all 0s ease 0s; width: 295px; height: 1003px;">
+                  </div>
+                </div>
+                <div class="resize-sensor-shrink"
+                  style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;">
+                  <div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-8 col-xl-9">
+
+            <div class="">
+              <div class="card-body pt-0">
+
+
+
+                <div class="tab-content pt-0">
+
+                  <div id="pat_appointments" class="tab-pane fade show active" role="tabpanel">
+                    <div class="card card-table mb-0">
+                      <div class="card-body">
+                        <div class="table-responsive">
+
+                          {% for appointment in appointment_data_list %}
+
+                          {% endfor %}
+                          <table class="table table-hover table-center mb-0">
+                            <thead>
+                              <tr>
+                                <th>Doctor</th>
+                                <th>Appt Date</th>
+                                <th>Booking Date</th>
+                                <th>Amount</th>
+
+                                <th>Status</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <h2 class="table-avatar">
+                                    <a href="profile.html" class="avatar avatar-sm me-2">
+                                      <img class="avatar-img rounded-circle"
+                                        src="../static/assets/img/doctors/{{appointment.Profile_URL}}" alt="User Image">
+                                    </a>
+                                    <a href="profile.html">Dr. {{appointment.Doctor_Name}}
+                                      <span>{{appointment.Specialization}}</span></a>
+                                  </h2>
+                                </td>
+                                <td>{{appointment.Appointment_Date}}<span
+                                    class="d-block text-info">{{appointment.Appointment_Time}}</span></td>
+                                <td>{{appointment.Created_at}}</td>
+                                <td>{{amount_paid}}</td>
+
+                                <td><span class="badge rounded-pill bg-success-light">Confirm</span></td>
+                                <td class="text-end">
+                                  <div class="table-action">
+
+                                    <a href="javascript:void(0);" class="btn btn-sm bg-info-light">
+                                      <svg class="svg-inline--fa fa-eye fa-w-18" aria-hidden="true" focusable="false"
+                                        data-prefix="far" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                          d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z">
+                                        </path>
+                                      </svg><!-- <i class="far fa-eye"></i> Font Awesome fontawesome.com --> View
+                                    </a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer class="footer footer-one">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <div class="footer-widget footer-about">
+                <a href="/">
+                  <div class="footer-logo">
+                    <img src="../static/assets/img/logo.png" alt="logo">
+                  </div>
+                </a>
+                <div class="footer-about-content">
+                  <p>Experience hassle-free healthcare access and connect with trusted healthcare professionals
+                    effortlessly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget footer-menu">
+                <h2 class="footer-title">For Patients</h2>
+                <ul>
+                  <li><a href="/">Search for Doctors</a></li>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Register</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget footer-menu">
+                <h2 class="footer-title">For Doctors</h2>
+                <ul>
+                  <li><a href="/login">Appointments</a></li>
+                  <li><a href="/coming-soon">Chat</a></li>
+                  <li><a href="/login">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-5">
+              <div class="footer-widget footer-contact">
+                <h2 class="footer-title">Contact Us</h2>
+                <div class="footer-contact-info">
+                  <div class="footer-address">
+                    <p><i class="feather-map-pin"></i> Jodhpur, Rajasthan</p>
+                  </div>
+                  <div class="footer-address">
+                    <p><i class="feather-phone-call"></i> +91 902-999-5550</p>
+                  </div>
+                  <div class="footer-address mb-0">
+                    <p><i class="feather-mail"></i> healthy.doctor2000@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="../static/assets/js/jquery-3.6.4.min.js"></script>
+
+  <script src="../static/assets/js/slick.js"></script>
+
+  <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../static/assets/js/moment.min.js"></script>
+  <script src="../static/assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+  <script src="../static/assets/js/script.js"></script>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-overlay"></div>
+
+  <div></div><quillbot-extension-portal></quillbot-extension-portal><quillbot-extension-root></quillbot-extension-root>
+  <div class="sidebar-overlay"></div>
+</body>
+
+</html>

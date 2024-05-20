@@ -1,0 +1,314 @@
+<html lang="en" style="transform: none;" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+
+<head>
+  <meta charset="utf-8">
+  <title>HMS</title>
+  <link rel="shortcut icon" href="../../static/assets/img/favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <link rel="stylesheet" href="../../static/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../../static/assets/plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../static/assets/css/feather.css">
+  <link rel="stylesheet" href="../../static/assets/css/custom.css">
+  <style id="theia-sticky-sidebar-stylesheet-TSS">
+    .theiaStickySidebar:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body style="transform: none;">
+
+  <div class="main-wrapper" style="transform: none;">
+
+    <header class="header header-fixed header-one header-space">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg header-nav">
+          <div class="navbar-header">
+            <a id="mobile_btn" href="javascript:void(0);">
+              <span class="bar-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </a>
+            <a href="/index" class="navbar-brand logo">
+              <img src="../../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+            </a>
+          </div>
+          <div class="main-menu-wrapper">
+            <div class="menu-header">
+              <a href="/index" class="menu-logo">
+                <img src="../../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+              </a>
+              <a id="menu_close" class="menu-close" href="javascript:void(0);">
+                <svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas"
+                  data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"
+                  data-fa-i2svg="">
+                  <path fill="currentColor"
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                  </path>
+                </svg><!-- <i class="fas fa-times"></i> Font Awesome fontawesome.com -->
+              </a>
+            </div>
+            <ul class="main-nav">
+              <li>
+                <a href="/index">Home </a>
+              </li>
+
+              <li class="active">
+                <a href="/patient-dashboard">Patients </a>
+              </li>
+
+              <li>
+                <a href="/doctor-dashboard">Doctors </a>
+              </li>
+              <li>
+                <a href="/admin-dashboard">Admin </a>
+              </li>
+
+              <li>
+                <a href="/contact-us">Contact Us </a>
+              </li>
+
+              <ul class="nav header-navbar-rht" style="padding-top: 20px;">
+
+                <li class="nav-item dropdown has-arrow logged-item">
+                  <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="user-img">
+                      <img class="rounded-circle" src="../../static/assets/img/{{profile}}" width="31" alt="profile">
+                    </span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <div class="user-header">
+                      <div class="avatar avatar-sm">
+                        <img src="../../static/assets/img/{{profile}}" alt="User Image"
+                          class="avatar-img rounded-circle">
+                      </div>
+                      <div class="user-text">
+                        <h6>{{name}}</h6>
+                        <p class="text-muted mb-0">{{user}}</p>
+                      </div>
+                    </div>
+                    <a class="dropdown-item" href="{{dashboard}}">Dashboard</a>
+                    <a class="dropdown-item" href="{{url}}">Profile Settings</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <div class="doctor-content">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="back-link">
+              <!-- <a href="consultation.html"><i class="fa-solid fa-arrow-left-long"></i> Back</a> -->
+              <p style="text-align: center;">Only Cash on Visit Payment Accepted.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="paitent-header">
+              <h4 class="paitent-title">Payment</h4>
+            </div>
+            <div class="booking-header">
+              <h4 class="booking-title">Payments Methods</h4>
+            </div>
+            <div class="payments-form">
+              <form action="{{ url_for('payment', doctor_id=doctor_id) }}" method="POST">
+
+                <div class="payment-form-group">
+                  <div class="form-group">
+                    <label class="custom_radio">
+                      <input type="" name="payment">
+                      <span class="checkmark"></span> Debit or Credit Card
+                    </label>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label class="custom_radio">
+                      <input type="radio" name="payment" value="cash" checked>
+                      <span class="checkmark"></span> Cash on Visit
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label class="custom_radio">
+                      <input type="" name="payment">
+                      <span class="checkmark"></span> Bank Transfer
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label class="custom_radio">
+                      <input type="" name="payment">
+                      <span class="checkmark"></span> UPI
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group mb-0">
+                  <div class="booking-btn">
+                    <button type="submit" class="btn btn-primary prime-btn justify-content-center align-items-center"
+                      value="Update">
+                      Next <i class="feather-arrow-right-circle"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="booking-header">
+              <h4 class="booking-title">Booking Summary</h4>
+            </div>
+            <div class="card booking-card">
+              <div class="card-body booking-card-body">
+                <div class="booking-doctor-details">
+                  <div class="booking-doctor-left">
+                    <div class="booking-doctor-img">
+                      <a href="{{ url_for('doctor_profile', doctor_id=doctor.Doctor_ID) }}">
+                        <img src="../../static/assets/img/doctors/{{ doctor.Profile_URL }}" alt="">
+                      </a>
+                    </div>
+                    <div class="booking-doctor-info">
+                      <h4><a href="{{ url_for('doctor_profile', doctor_id=doctor.Doctor_ID) }}">Dr. {{ doctor.Name
+                          }}</a></h4>
+                      <p>{{ doctor.Qualification }}, {{ doctor.Specialization }}</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card booking-card">
+              <div class="card-body booking-card-body booking-list-body">
+                <div class="booking-list">
+                  <div class="booking-date-list">
+                    <ul>
+                      <li>Appoinment Date: <span>{{ appointment_date}}</span></li>
+                      <li>Appoinment Time: <span>{{ appointment_time}}</span></li>
+                    </ul>
+                  </div>
+                  <div class="booking-doctor-right">
+                    <p>
+                      <a href="{{ url_for('book_appointment', doctor_id=doctor.Doctor_ID) }}">Edit</a>
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="card booking-card">
+              <div class="card-body booking-card-body booking-list-body">
+                <div class="booking-list">
+                  <div class="booking-date-list consultation-date-list">
+                    <ul>
+                      <li>Consultation Fee: <span>₹{{ doctor_fee }}</span></li>
+                      <li>Booking Fee: <span>₹{{ booking_fee }}</span></li>
+                      <li>GST: <span>₹{{ tax }}</span></li>
+                      <li><span class="total-amount"></span>Total <span>₹{{ total_fee }}</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <footer class="footer footer-one">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <div class="footer-widget footer-about">
+                <a href="/">
+                  <div class="footer-logo">
+                    <img src="../../static/assets/img/logo.png" alt="logo">
+                  </div>
+                </a>
+                <div class="footer-about-content">
+                  <p>Experience hassle-free healthcare access and connect with trusted healthcare professionals
+                    effortlessly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget footer-menu">
+                <h2 class="footer-title">For Patients</h2>
+                <ul>
+                  <li><a href="/">Search for Doctors</a></li>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Register</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget footer-menu">
+                <h2 class="footer-title">For Doctors</h2>
+                <ul>
+                  <li><a href="/login">Appointments</a></li>
+                  <li><a href="/coming-soon">Chat</a></li>
+                  <li><a href="/login">Login</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-5">
+              <div class="footer-widget footer-contact">
+                <h2 class="footer-title">Contact Us</h2>
+                <div class="footer-contact-info">
+                  <div class="footer-address">
+                    <p><i class="feather-map-pin"></i> Jodhpur, Rajasthan</p>
+                  </div>
+                  <div class="footer-address">
+                    <p><i class="feather-phone-call"></i> +91 902-999-5550</p>
+                  </div>
+                  <div class="footer-address mb-0">
+                    <p><i class="feather-mail"></i> healthy.doctor2000@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="../../static/assets/js/jquery-3.6.4.min.js"></script>
+
+  <script src="../../static/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../../static/assets/js/moment.min.js"></script>
+  <script src="../../static/assets/js/slick.js"></script>
+  <script src="../../static/assets/js/script.js">
+
+
+
+    <script src="../../static/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+  <script src="../../static/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+  <script src="../../static/assets/js/circle-progress.min.js"></script>
+
+  <script src="../../static/assets/js/script.js"></script>
+</body>
+
+</html>
